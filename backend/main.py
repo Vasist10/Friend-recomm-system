@@ -4,9 +4,9 @@ from backend.routes import recommendations  # Ensure routes directory has an __i
 import uvicorn
 from backend.database import get_db
 
-app1 = FastAPI()
+app = FastAPI(title="Friend Recommendation System")
 
-@app1.get("/test_db")
+@app.get("/test_db")
 def test_db_connection():
     """Check if the database connection is working."""
     db = get_db()
@@ -18,7 +18,6 @@ def test_db_connection():
         raise HTTPException(status_code=500, detail=f"Database connection failed: {str(e)}")
 
 
-app = FastAPI(title="Friend Recommendation System")
 
 # Enable CORS for frontend requests
 app.add_middleware(
