@@ -42,3 +42,32 @@
     margin-top: 10px;
     font-size: 14px;
   }
+
+  .recommendation-item {
+    transition: all 0.3s ease;
+  }
+  
+  .recommendation-item:hover {
+    transform: translateX(5px);
+    background: #444 !important;
+  }
+  
+  .score-badge {
+    background: #FFD70022;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  .recommendations-container {
+    position: absolute;
+    right: 20px;
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 100;
+  }
+  
+  /* Add to your existing buttonStyle */
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
